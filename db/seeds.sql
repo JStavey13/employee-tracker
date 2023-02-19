@@ -14,3 +14,10 @@ VALUES
     ( "Head of Accounts", "Accounting", 110000),
     ( "Sales Manager", "Sales", 50000);
 
+INSERT INTO employees (first_name, last_name, role_id, manager_id)
+VALUES
+    ( "Bobby", "Hill", 3, 2),
+    ( "Peggy", "Gribble", 1, 3),
+    ( "Hank", "Strickland", 2, 1),
+    ( "Buck", "Bluecorn", 4, 4);
+
