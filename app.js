@@ -10,11 +10,15 @@ const db = mysql.createConnection ({
     port: 3306,
     database: 'employee_tracker'
 },
-console.log(`Connected to the employee_tracker database`))
+console.log(`Connected to the employee_tracker database`)
+)
 
-db.query('SELECT * FROM roles WHERE id > 1', function (err, roles) {
-    console.table(roles);
-    if (err) throw err
-  });
+db.query(`SELECT * FROM ?? WHERE ?? > ?`, [`roles`, `id`, 1],
+(err, result) => {
+    if (err) {
+      console.log(err);
+    }
+    console.table(result);
+});
 
   
