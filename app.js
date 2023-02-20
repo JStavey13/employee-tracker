@@ -12,7 +12,7 @@ const db = mysql.createConnection ({
 },
 console.log(`Connected to the employee_tracker database`))
 
-db.query('SELECT * FROM roles', function (err, roles) {
+db.query('SELECT * FROM roles WHERE id > 1', function (err, roles) {
     console.table(roles);
     if (err) throw err
   });
