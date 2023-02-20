@@ -9,7 +9,8 @@ const db = mysql.createConnection ({
     password: 'rootroot',
     port: 3306,
     database: 'employee_tracker'
-})
+},
+console.log(`Connected to the employee_tracker database`))
 
 db.query('SELECT * FROM roles', function (err, roles) {
     console.table(roles);
